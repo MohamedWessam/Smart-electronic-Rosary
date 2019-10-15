@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="controller"
+            type="com.wessam.seb7a.ui.NightModeActivity" />
+
+        <variable
+            name="data"
+            type="com.wessam.seb7a.model.Data" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/night_mood_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:onClick="@{() -> controller.increaseCount()}"
+        tools:context=".ui.NightModeActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:layout_marginEnd="@dimen/_36sdp"
+            android:fontFamily="@font/digital"
+            android:text="@{String.valueOf(data.count)}"
+            android:textColor="@color/greenLight"
+            android:textSize="@dimen/_44ssp"
+            android:transitionName="countTransition"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="lollipop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

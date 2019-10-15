@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">سبحة</string>
+    <string name="clear">حذف</string>
+    <string name="night_mood">الوضع الليلي</string>
+    <string name="toolbar_title">السبحة الإلكترونية</string>
+    <string name="total_per_day">الإجمالي</string>
+    <string name="oK">حسناً</string>
+    <string name="open_night_mood">تشغيل الوضع الليلي</string>
+    <string name="night_mood_msg">يعمل الوضع الليلي على تخفيض سطوع الشاشة للحفاظ على نظرك وبطارية الجهاز.\nيمكنك التسبيح بالضغط على أي موضع في الشاشة أو بالضغط على مفتاح تعلية الصوت.\nللخروج من الوضع الليلي يمكنك استخدام مفتاح خفض الصوت.</string>
+    <string name="delet_title">تصفير العداد</string>
+    <string name="delete_msg">سيؤدي ذلك إلى تصفير جميع العدادات</string>
+    <string name="confirm">تأكيد</string>
+    <string name="cancel">تراجع</string>
+</resources>
