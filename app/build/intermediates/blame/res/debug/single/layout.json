@@ -1,14 +1,14 @@
 [
     {
-        "merged": "D:\\Seb7a\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_night_mode.xml",
-        "source": "D:\\Seb7a\\app\\src\\main\\res\\layout\\dialog_night_mode.xml"
+        "merged": "D:\\AndroidStudioProjects\\Seb7a\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\AndroidStudioProjects\\Seb7a\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "D:\\Seb7a\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_night_mode.xml",
-        "source": "D:\\Seb7a\\app\\src\\main\\res\\layout\\activity_night_mode.xml"
+        "merged": "D:\\AndroidStudioProjects\\Seb7a\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_night_mode.xml",
+        "source": "D:\\AndroidStudioProjects\\Seb7a\\app\\src\\main\\res\\layout\\activity_night_mode.xml"
     },
     {
-        "merged": "D:\\Seb7a\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "D:\\Seb7a\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "D:\\AndroidStudioProjects\\Seb7a\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_night_mode.xml",
+        "source": "D:\\AndroidStudioProjects\\Seb7a\\app\\src\\main\\res\\layout\\dialog_night_mode.xml"
     }
 ]

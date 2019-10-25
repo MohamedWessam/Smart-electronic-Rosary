@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Seb7a\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw1080dp-v13\\values-sw1080dp-v13.xml",
+            "outputFile": "D:\\AndroidStudioProjects\\Seb7a\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw1080dp-v13\\values-sw1080dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\MOHAMED WESSAM\\.gradle\\caches\\transforms-2\\files-2.1\\70c74e03a7e0317ffa121f845e0b77f6\\sdp-android-1.0.6\\res\\values-sw1080dp-v13\\values-sw1080dp-v13.xml",

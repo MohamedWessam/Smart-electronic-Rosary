@@ -2,32 +2,22 @@ package com.wessam.seb7a.ui;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityOptionsCompat;
-import androidx.core.view.ViewCompat;
 import androidx.databinding.DataBindingUtil;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.transition.Slide;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 
-import com.wessam.seb7a.databinding.DialogNightModeBinding;
 import com.wessam.seb7a.model.Data;
 import com.wessam.seb7a.R;
 import com.wessam.seb7a.databinding.ActivityMainBinding;
 
 import java.util.Locale;
-import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding mBinding;
     private Data mData;
-    private Dialog nightModeDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         mBinding.setController(this);
         mBinding.setData(mData);
 
-        setupWindowAnimations();
     }
 
     @Override
@@ -63,41 +52,19 @@ public class MainActivity extends AppCompatActivity {
             showNightModeDialog();
             mData.setFirstLogin(false);
         } else {
-            startNightModeActivityWithTransition();
-        }
-    }
-
-    public void startNightModeActivityWithTransition() {
-        if (nightModeDialog != null) {
-            nightModeDialog.dismiss();
-        }
-        Intent intent = new Intent(this, NightModeActivity.class);
-        ActivityOptionsCompat options = ActivityOptionsCompat.
-                makeSceneTransitionAnimation(this, mBinding.textView2,
-                        Objects.requireNonNull(ViewCompat.getTransitionName(mBinding.textView2)));
-        startActivity(intent, options.toBundle());
-    }
-
-    private void setupWindowAnimations() {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            Slide slideTransition = new Slide();
-            slideTransition.setSlideEdge(Gravity.START);
-            slideTransition.setDuration(600);
-
-            getWindow().setReenterTransition(slideTransition);
-            getWindow().setExitTransition(slideTransition);
+            startActivity(new Intent(this, NightModeActivity.class));
         }
     }
 
     public void showNightModeDialog() {
-        DialogNightModeBinding mDialogBinding = DataBindingUtil.inflate(LayoutInflater.from(this), R.layout.dialog_night_mode, null, false);
-        mDialogBinding.setController(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        nightModeDialog = new Dialog(this);
-        nightModeDialog.setContentView(mDialogBinding.getRoot());
-        Objects.requireNonNull(nightModeDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        nightModeDialog.setCancelable(false);
-        nightModeDialog.show();
+        builder.setTitle(R.string.open_night_mood)
+                .setMessage(R.string.night_mood_msg)
+                .setPositiveButton(R.string.oK, (dialog, id) -> clearTotalCount());
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     public void showDeleteDialog() {

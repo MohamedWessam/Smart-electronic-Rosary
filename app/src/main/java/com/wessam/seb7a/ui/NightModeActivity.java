@@ -89,7 +89,7 @@ public class NightModeActivity extends AppCompatActivity {
     @SuppressLint("NewApi")
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
-        int action = event.getAction();
+        int action  = event.getAction();
         int keyCode = event.getKeyCode();
         switch (keyCode) {
             case KeyEvent.KEYCODE_VOLUME_UP:
@@ -99,7 +99,7 @@ public class NightModeActivity extends AppCompatActivity {
                 return true;
             case KeyEvent.KEYCODE_VOLUME_DOWN:
                 if (action == KeyEvent.ACTION_DOWN) {
-                    finishAfterTransition();
+                    finish();
                 }
                 return true;
             default:
@@ -108,7 +108,7 @@ public class NightModeActivity extends AppCompatActivity {
     }
 
     //reduce screen brightness
-    private void changeScreenBrightness(){
+    private void changeScreenBrightness() {
         mParams.screenBrightness = 0.01f;
         getWindow().setAttributes(mParams);
     }
@@ -126,9 +126,7 @@ public class NightModeActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            finishAfterTransition();
-        }
+        finish();
     }
 
 }

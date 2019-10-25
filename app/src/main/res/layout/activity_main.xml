@@ -100,8 +100,8 @@
 
                 <Button
                     android:id="@+id/button"
-                    android:layout_width="@dimen/_230sdp"
-                    android:layout_height="@dimen/_230sdp"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_200sdp"
                     android:background="@drawable/circle_orange"
                     android:onClick="@{() -> controller.increaseCount()}"
                     app:layout_constraintBottom_toTopOf="@+id/textView5"
