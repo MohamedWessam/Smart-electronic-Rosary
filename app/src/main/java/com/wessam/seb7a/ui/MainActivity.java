@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         builder.setTitle(R.string.open_night_mood)
                 .setMessage(R.string.night_mood_msg)
-                .setPositiveButton(R.string.oK, (dialog, id) -> clearTotalCount());
+                .setPositiveButton(R.string.oK, (dialog, id) -> dialog.dismiss());
 
         AlertDialog dialog = builder.create();
         dialog.show();
